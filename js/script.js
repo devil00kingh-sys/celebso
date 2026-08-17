@@ -10,12 +10,15 @@
         updateCopyrightYear();
         initMobileMenu();
         initReveal();
+        initThemeToggle();
+        initReelSound();
+        initViewAll();
     });
 
     function updateCopyrightYear() {
         var copy = document.querySelector(".copy");
         if (copy) {
-            copy.textContent = "\u00A9 " + new Date().getFullYear() + " Celebso. All rights reserved.";
+            copy.textContent = "\u00A9 " + new Date().getFullYear() + " ANTELLAY Tech. All Rights Reserved. A Celebso Group Company.";
         }
     }
 
@@ -34,6 +37,74 @@
             link.addEventListener("click", function () {
                 menu.classList.remove("open");
                 toggle.classList.remove("active");
+            });
+        });
+    }
+
+    function initThemeToggle() {
+        var toggles = document.querySelectorAll(".theme-toggle");
+        if (!toggles.length) return;
+
+        var saved = localStorage.getItem("celebso-theme");
+        if (saved !== "dark") {
+            document.body.classList.add("light");
+        }
+
+        toggles.forEach(function (el) {
+            var label = document.createElement("span");
+            label.className = "theme-label";
+            label.textContent = "Light / Dark";
+            el.appendChild(label);
+        });
+
+        toggles.forEach(function (toggle) {
+            toggle.addEventListener("click", function () {
+                var isLight = document.body.classList.toggle("light");
+                localStorage.setItem("celebso-theme", isLight ? "light" : "dark");
+            });
+        });
+    }
+
+    function initViewAll() {
+        var btn = document.querySelector(".view");
+        var modal = document.getElementById("reelsModal");
+        if (!btn || !modal) return;
+
+        btn.addEventListener("click", function () {
+            modal.classList.add("open");
+            document.body.style.overflow = "hidden";
+        });
+
+        var close = modal.querySelector(".reels-modal-close");
+        close.addEventListener("click", closeModal);
+
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+        });
+
+        function closeModal() {
+            modal.classList.remove("open");
+            document.body.style.overflow = "";
+        }
+    }
+
+    function initReelSound() {
+        var buttons = document.querySelectorAll(".reel-mute");
+        if (!buttons.length) return;
+
+        buttons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var reel = btn.closest(".reel");
+                var video = reel.querySelector("video");
+                if (!video) return;
+                var muted = video.muted;
+                video.muted = !muted;
+                btn.textContent = muted ? "🔊" : "🔇";
+                btn.setAttribute("aria-label", muted ? "Mute" : "Unmute");
             });
         });
     }
