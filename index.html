@@ -16,50 +16,18 @@
 
     <a class="logo" href="#">
 
-        <svg class="main-icon" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
-            <line class="link" x1="80" y1="20" x2="20" y2="20" />
-            <line class="link" x1="20" y1="20" x2="20" y2="65" />
-            <line class="link" x1="20" y1="65" x2="80" y2="65" />
-            <line class="link" x1="80" y1="65" x2="80" y2="110" />
-            <line class="link" x1="80" y1="110" x2="20" y2="110" />
-            <circle class="node" cx="20" cy="20" r="17" />
-            <circle class="node" cx="80" cy="20" r="17" />
-            <circle class="node" cx="20" cy="65" r="17" />
-            <circle class="node" cx="80" cy="65" r="17" />
-            <circle class="node" cx="20" cy="110" r="17" />
-            <circle class="node" cx="80" cy="110" r="17" />
-        </svg>
-
-        <div class="logo-text">
-            CELEB
-            <svg class="mini-icon" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
-                <line class="link" x1="80" y1="20" x2="20" y2="20" />
-                <line class="link" x1="20" y1="20" x2="20" y2="65" />
-                <line class="link" x1="20" y1="65" x2="80" y2="65" />
-                <line class="link" x1="80" y1="65" x2="80" y2="110" />
-                <line class="link" x1="80" y1="110" x2="20" y2="110" />
-                <circle class="node-white" cx="20" cy="20" r="17" />
-                <circle class="node" cx="80" cy="20" r="17" />
-                <circle class="node" cx="20" cy="65" r="17" />
-                <circle class="node" cx="80" cy="65" r="17" />
-                <circle class="node" cx="20" cy="110" r="17" />
-                <circle class="node" cx="80" cy="110" r="17" />
-            </svg>
-            O
-        </div>
+        <img class="main-icon" src="images/ChatGPT_Image_Aug_17__2026__11_28_44_PM-removebg-preview.png" alt="Celebso">
 
     </a>
 
     <nav class="menu">
-        <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">Creators</a>
-        <a href="#">Community</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#creators">Creators</a>
+        <a href="#community">Community</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
     </nav>
-
-    <button class="theme-toggle" aria-label="Toggle theme">☀</button>
 
     <button class="install">↓ &nbsp; Install Now</button>
 
@@ -71,13 +39,12 @@
 </header>
 
 <nav class="mobile-menu">
-    <a href="#">Home</a>
-    <a href="#">Features</a>
-    <a href="#">Creators</a>
-    <a href="#">Community</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact</a>
-    <button class="theme-toggle">☀ &nbsp; Light / Dark</button>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#creators">Creators</a>
+    <a href="#community">Community</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
     <button class="install">↓ &nbsp; Install Now</button>
 </nav>
 
@@ -86,7 +53,7 @@
 
 <!-- ================= HERO ================= -->
 
-<section class="hero reveal">
+<section class="hero reveal" id="home">
 
 <div class="hero-left">
 
@@ -130,7 +97,7 @@
 
 <!-- ================= BANNER ================= -->
 
-<section class="banner reveal">
+<section class="banner reveal" id="features">
 
 <img
 src="images/banner.png"
@@ -242,9 +209,18 @@ alt="Banner">
 </section>
 
 
+<!-- ================= STEPS ================= -->
+
+<section class="steps reveal" id="about">
+
+<img class="steps-image" src="images/steps.jpg" alt="Steps">
+
+</section>
+
+
 <!-- ================= COMMUNITY ================= -->
 
-<section class="community reveal">
+<section class="community reveal" id="community">
 
 <h2>Community</h2>
 
@@ -267,7 +243,7 @@ Collaborate, learn and grow together.
 
 <!-- ================= REELS ================= -->
 
-<section>
+<section id="creators">
 
 <div class="reel-heading reveal">
 
@@ -343,7 +319,7 @@ Collaborate, learn and grow together.
 <!-- REEL 4 -->
 <div class="reel reveal">
 
-<video src="video/WHAT.%20A.%20DAY!!Announced%20my%20upcoming%20show%20%23TheRevolutionaries%20and%20my%20debut%20movie%20%23KukuKiKundli%20To.mp4" autoplay muted loop playsinline></video>
+<video src="video/My%20non-negotiables%20when%20hiring.mp4" autoplay muted loop playsinline></video>
 
 <button class="reel-mute" aria-label="Toggle sound">🔇</button>
 
@@ -480,7 +456,7 @@ Collaborate, learn and grow together.
 
         <!-- M 4 -->
         <div class="reel">
-        <video src="video/WHAT.%20A.%20DAY!!Announced%20my%20upcoming%20show%20%23TheRevolutionaries%20and%20my%20debut%20movie%20%23KukuKiKundli%20To.mp4" autoplay muted loop playsinline></video>
+        <video src="video/My%20non-negotiables%20when%20hiring.mp4" autoplay muted loop playsinline></video>
         <button class="reel-mute" aria-label="Toggle sound">🔇</button>
         <div class="reel-user">
         <img src="https://i.pravatar.cc/100?img=59">
@@ -541,18 +517,22 @@ Collaborate, learn and grow together.
 </div>
 
 
-<!-- ================= STEPS ================= -->
-
-<section class="steps reveal">
-
-<img class="steps-image" src="images/steps.jpg" alt="Steps">
-
-</section>
-
-
 <!-- ================= INSTALL ================= -->
 
 <section class="download reveal">
+
+<span class="dl-orb dl-orb-1"></span>
+<span class="dl-orb dl-orb-2"></span>
+<span class="dl-orb dl-orb-3"></span>
+<span class="dl-orb dl-orb-4"></span>
+<span class="dl-orb dl-orb-5"></span>
+
+<span class="dl-part p1"></span>
+<span class="dl-part p2"></span>
+<span class="dl-part p3"></span>
+<span class="dl-part p4"></span>
+<span class="dl-part p5"></span>
+<span class="dl-part p6"></span>
 
 <div>
 
@@ -562,7 +542,7 @@ Collaborate, learn and grow together.
 
 <div class="download-buttons">
 
-<button class="install">↓ &nbsp; Install Now</button>
+<button class="install"><span class="arrow-down">↓</span> &nbsp; Install Now</button>
 
 <button class="learn">Learn More</button>
 
@@ -578,77 +558,60 @@ Collaborate, learn and grow together.
 
 <!-- ================= MEDIA ================= -->
 
-<div class="media">
+<section class="media">
 
 <div class="media-track">
 
     <div class="media-set">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM.jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(1).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(2).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(3).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(4).jpeg" alt="Media Logo">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_04_59%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_07_48%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_10_15%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_13_08%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_21_54%20PM.png" alt="">
     </div>
 
     <div class="media-set">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM.jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(1).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(2).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(3).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(4).jpeg" alt="Media Logo">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_04_59%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_07_48%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_10_15%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_13_08%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_21_54%20PM.png" alt="">
     </div>
 
     <div class="media-set">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM.jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(1).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(2).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(3).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(4).jpeg" alt="Media Logo">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_04_59%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_07_48%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_10_15%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_13_08%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_21_54%20PM.png" alt="">
     </div>
 
     <div class="media-set">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM.jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(1).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(2).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(3).jpeg" alt="Media Logo">
-        <img src="images/WhatsApp%20Image%202026-08-15%20at%2011.42.57%20AM%20(4).jpeg" alt="Media Logo">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_04_59%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_07_48%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_10_15%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_13_08%20PM.png" alt="">
+        <img src="images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2011_21_54%20PM.png" alt="">
     </div>
 
 </div>
 
-</div>
+</section>
 
 
 <!-- ================= FOOTER ================= -->
 
-<footer>
+<footer id="contact">
 
 <div class="footer-hero">
 
     <img class="footer-hero-dark" src="images/footer-dark.jpg" alt="Celebso">
-    <img class="footer-hero-light" src="images/footer-light.jpg" alt="Celebso">
 
     <div class="footer-text">
 
         <div class="footer-logo">
 
-            <div class="logo-text">
-                CELEB
-                <svg class="mini-icon" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
-                    <line class="link" x1="80" y1="20" x2="20" y2="20" />
-                    <line class="link" x1="20" y1="20" x2="20" y2="65" />
-                    <line class="link" x1="20" y1="65" x2="80" y2="65" />
-                    <line class="link" x1="80" y1="65" x2="80" y2="110" />
-                    <line class="link" x1="80" y1="110" x2="20" y2="110" />
-                    <circle class="node-white" cx="20" cy="20" r="17" />
-                    <circle class="node" cx="80" cy="20" r="17" />
-                    <circle class="node" cx="20" cy="65" r="17" />
-                    <circle class="node" cx="80" cy="65" r="17" />
-                    <circle class="node" cx="20" cy="110" r="17" />
-                    <circle class="node" cx="80" cy="110" r="17" />
-                </svg>
-                O
-            </div>
+<img class="main-icon" src="images/ChatGPT_Image_Aug_17__2026__11_28_44_PM-removebg-preview.png" alt="Celebso">
 
         </div>
 
