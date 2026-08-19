@@ -114,12 +114,6 @@
             var target = document.querySelector(href);
             if (!target) return;
             sections[href] = target;
-
-            link.addEventListener("mouseenter", function () {
-                if (window.innerWidth > 850) {
-                    target.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-            });
         });
 
         function setActive(id) {
@@ -134,13 +128,14 @@
             var scrollY = window.scrollY;
             var current = "#home";
             var offset = 100;
-            Object.keys(sections).forEach(function (href) {
-                var el = sections[href];
-                var top = el.offsetTop;
-                if (top - offset <= scrollY) {
-                    current = href;
-                }
-            });
+            Object.keys(sections)
+                .map(function (href) { return { href: href, top: sections[href].offsetTop }; })
+                .sort(function (a, b) { return a.top - b.top; })
+                .forEach(function (item) {
+                    if (item.top - offset <= scrollY) {
+                        current = item.href;
+                    }
+                });
             setActive(current);
         }
 
