@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebso - Terms & Conditions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#050505',
+                            card: '#0a0a0a',
+                            border: '#1f1f1f',
+                            text: '#f3f4f6',
+                            textMuted: '#9ca3af',
+                            red: '#ff3333'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Shared Navbar Styles -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- Shared Footer Styles -->
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 600px;
+            background: radial-gradient(circle at top center, rgba(255, 51, 51, 0.15) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .glass-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid #1f1f1f;
+        }
+    
+        .reveal{opacity:0;}
+        .reveal.visible{animation:revealIn .6s ease both;}
+        @keyframes revealIn{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
+        @media(prefers-reduced-motion:reduce){.reveal{opacity:1;}}
+    </style>
+</head>
+<body class="bg-dark-bg antialiased">
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-inner">
+            <a class="logo" href="index.html">
+                <img class="main-icon" src="images/ChatGPT_Image_Aug_18__2026__10_11_38_PM-removebg-preview.png" alt="Celebso">
+            </a>
+            <nav class="menu">
+                <a href="about.html">About Us</a>
+                <a href="news.html">News</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            <div class="nav-auth">
+                <a href="#" class="auth-login">Log in</a>
+                <a href="#" class="auth-signup">Create account</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu">
+        <a href="about.html">About Us</a>
+        <a href="news.html">News</a>
+        <a href="blog.html">Blog</a>
+        <div class="mobile-auth">
+            <a href="#" class="auth-login">Log in</a>
+            <a href="#" class="auth-signup">Create account</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main relative class="max-w-4xl mx-auto px-6 py-16">
+        
+        <!-- Hero Section --><div class="hero-glow"></div>
+        <div class="text-center mb-16 reveal">
+            <div class="w-16 h-16 bg-dark-card rounded-full mx-auto flex items-center justify-center mb-6 relative">
+                <i class="ph ph-file-text text-3xl text-dark-red"></i>
+                <div class="absolute bottom-3 right-3 bg-dark-bg rounded-full">
+                    <i class="ph-fill ph-shield-check text-dark-red text-sm"></i>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Terms & Conditions</h1>
+            <p class="text-dark-textMuted text-base md:text-lg mb-2">Please read these Terms & Conditions carefully before using Celebso.</p>
+            <p class="text-dark-textMuted text-base md:text-lg mb-6">By accessing or using our platform, you agree to be bound by these terms.</p>
+            <p class="text-dark-textMuted text-sm">Last updated: May 18, 2025</p>
+        </div>
+
+        <!-- Terms List -->
+        <div class="flex flex-col">
+            
+            <!-- Item 1 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">1</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Acceptance of Terms</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        By creating an account or using Celebso, you agree to these Terms & Conditions and our Privacy Policy. If you do not agree, please do not use our platform.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">2</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Eligibility</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        You must be at least 13 years old to use Celebso. By using our platform, you represent and warrant that you meet this requirement.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">3</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Account Registration</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to provide accurate and complete information.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">4</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">User Content</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        You retain ownership of the content you post on Celebso. By posting, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, and display your content in connection with operating and promoting our platform.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">5</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Acceptable Use</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        You agree not to use Celebso for any unlawful purpose or in any way that may harm, disable, or impair the platform or interfere with any other user's experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">6</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Community Guidelines</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        You agree to follow our Community Guidelines. We reserve the right to remove content or suspend accounts that violate our policies or are reported by other users.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">7</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Termination</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        We may suspend or terminate your account at any time for violations of these Terms or for any other reason at our sole discretion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">8</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Disclaimer of Warranties</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        Celebso is provided "as is" and "as available" without warranties of any kind. We do not guarantee that the platform will be error-free or uninterrupted.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">9</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Limitation of Liability</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        Celebso shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of or inability to use the platform.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="flex gap-6 py-8 border-t border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">10</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Changes to Terms</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        We may update these Terms from time to time. We will notify users of any material changes. Continued use of Celebso after changes constitutes acceptance of the new Terms.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 11 -->
+            <div class="flex gap-6 py-8 border-t border-b border-dark-border hover:bg-dark-card/40 transition duration-300 reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-card flex items-center justify-center flex-shrink-0">
+                    <span class="text-dark-red font-bold text-lg">11</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Contact Us</h3>
+                    <p class="text-dark-textMuted leading-relaxed text-[15px]">
+                        If you have any questions about these Terms, please contact us at <a href="mailto:support@celebso.com" class="text-dark-red hover:underline">support@celebso.com</a>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+<div class="footer-hero">
+
+    <img class="footer-hero-dark" src="images/footer-dark.jpg" alt="Celebso">
+
+    <div class="footer-text">
+
+        <div class="footer-logo">
+
+<img class="main-icon" src="images/ChatGPT%20Image%20Aug%2018%2C%202026%2C%2010_51_46%20PM.png" alt="Celebso">
+
+        </div>
+
+        <div class="footer-menu">
+
+            <a href="#contact">Contact Us</a>
+            <a href="terms.html">Terms</a>
+            <a href="help-center.html">Help Center</a>
+
+        </div>
+
+        <div class="email">
+        info@celebso.com
+        </div>
+
+        <div class="social">
+        <a class="soc" href="https://www.linkedin.com/company/celebso/posts/?feedView=all" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+        <a class="soc" href="https://www.instagram.com/celebsox?igsh=MXh6MjJ1cjg4ZWp2cA==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM448 261.9c0 37.4-.4 74.6-2.6 112-2.3 43.6-12.1 82.2-43.9 114-31.8 31.8-70.4 41.6-114 43.9-37.4 2.2-74.6 2.6-112 2.6s-74.6-.4-112-2.6c-43.6-2.3-82.2-12.1-114-43.9-31.8-31.8-41.6-70.4-43.9-114-2.2-37.4-2.6-74.6-2.6-112s.4-74.6 2.6-112c2.3-43.6 12.1-82.2 43.9-114 31.8-31.8 70.4-41.6 114-43.9 37.4-2.2 74.6-2.6 112-2.6s74.6.4 112 2.6c43.6 2.3 82.2 12.1 114 43.9 31.8 31.8 41.6 70.4 43.9 114 2.2 37.4 2.6 74.6 2.6 112z"/></svg></a>
+        <a class="soc" href="https://x.com/Celebso_" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+        </div>
+
+        <div class="copy">
+        © 2026 ANTELLAY Tech. All Rights Reserved. A Celebso Group Company.
+        </div>
+
+    </div>
+
+</div>
+
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* ==================================================
+   CELEBSO Shared Footer - Stylesheet
+   Matches the index.html footer.
+   ================================================== */
+
+footer{
+    background:#090a13;
+    text-align:center;
+    padding:0;
+}
+
+.footer-hero{
+    position:relative;
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+    box-shadow:0 -12px 40px rgba(0,0,0,.35);
+}
+
+.footer-hero img{
+    width:100%;
+    height:auto;
+    max-height:360px;
+    display:block;
+    object-fit:cover;
+}
+
+.footer-hero .footer-hero-dark{
+    display:block;
+}
+
+.footer-text{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:30px 20px;
+    background:rgba(7,8,18,.45);
+    color:#ffffff;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:11px;
+    font-size:34px;
+    font-weight:800;
+    letter-spacing:5px;
+    margin-bottom:25px;
+    cursor:pointer;
+    transition:opacity .25s, transform .25s;
+}
+
+.footer-logo:hover{
+    opacity:.85;
+    transform:scale(1.03);
+}
+
+.footer-logo .main-icon{
+    width:250px;
+    height:auto;
+    border-radius:14px;
+    background:transparent;
+}
+
+.footer-menu{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:27px;
+    margin-bottom:20px;
+}
+
+.footer-menu a{
+    font-size:16px;
+    color:#cfcfd8;
+    transition:color .25s;
+}
+
+.footer-menu a:hover{
+    color:#ffca05;
+}
+
+.email{
+    color:#c9c9d1;
+    font-size:18px;
+    margin-bottom:17px;
+    transition:color .25s;
+}
+
+.email:hover{
+    color:#ffca05;
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    font-size:27px;
+    margin-bottom:17px;
+    color:#fff;
+}
+
+.social a{
+    cursor:pointer;
+    transition:transform .25s, color .25s, text-shadow .25s;
+    display:inline-block;
+    color:#fff;
+}
+
+.social a svg{
+    width:27px;
+    height:27px;
+    fill:currentColor;
+}
+
+.social a:hover{
+    color:#ffca05;
+    transform:translateY(-4px) scale(1.2);
+    text-shadow:0 0 16px rgba(255,202,5,.6);
+}
+
+.copy{
+    color:#e6e6ee;
+    font-size:16px;
+    border-top:1px solid rgba(255,255,255,.3);
+    padding-top:17px;
+    margin-top:10px;
+    width:100%;
+    max-width:700px;
+}
+
+@media(max-width:850px){
+
+    .footer-text{
+        padding:24px 16px;
+    }
+
+    .footer-logo{
+        font-size:26px;
+        margin-bottom:18px;
+    }
+
+    .footer-menu{
+        gap:14px 20px;
+        margin-bottom:16px;
+    }
+
+    .social{
+        gap:20px;
+        font-size:25px;
+    }
+
+    .footer-hero{
+        display:flex;
+        flex-direction:column;
+        box-shadow:none;
+    }
+
+    .footer-hero img{
+        max-height:none;
+        height:auto;
+        aspect-ratio:16/6;
+    }
+
+    .footer-text{
+        position:static;
+        inset:auto;
+        background:#0c0d18;
+        padding:28px 18px 24px;
+    }
+
+    .footer-menu a{
+        font-size:15px;
+        padding:6px 4px;
+    }
+}

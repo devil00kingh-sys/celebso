@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebso - News</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#050505',
+                            card: '#0a0a0a',
+                            border: '#1f1f1f',
+                            text: '#f3f4f6',
+                            textMuted: '#9ca3af',
+                            red: '#ff3333'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Shared Navbar Styles -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- Shared Footer Styles -->
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 600px;
+            background: radial-gradient(circle at top center, rgba(255, 51, 51, 0.15) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .glass-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid #1f1f1f;
+        }
+    
+        .reveal{opacity:0;}
+        .reveal.visible{animation:revealIn .6s ease both;}
+        @keyframes revealIn{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
+        
+        .grid .reveal:nth-child(1).visible{animation-delay:.05s}
+        .grid .reveal:nth-child(2).visible{animation-delay:.12s}
+        .grid .reveal:nth-child(3).visible{animation-delay:.19s}
+        .grid .reveal:nth-child(4).visible{animation-delay:.26s}
+        .grid .reveal:nth-child(5).visible{animation-delay:.33s}
+        .grid .reveal:nth-child(6).visible{animation-delay:.4s}
+        @media(prefers-reduced-motion:reduce){.reveal{opacity:1;}}
+    </style>
+</head>
+<body class="bg-dark-bg antialiased">
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-inner">
+            <a class="logo" href="index.html">
+                <img class="main-icon" src="images/ChatGPT_Image_Aug_18__2026__10_11_38_PM-removebg-preview.png" alt="Celebso">
+            </a>
+            <nav class="menu">
+                <a href="about.html">About Us</a>
+                <a href="news.html">News</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            <div class="nav-auth">
+                <a href="#" class="auth-login">Log in</a>
+                <a href="#" class="auth-signup">Create account</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu">
+        <a href="about.html">About Us</a>
+        <a href="news.html">News</a>
+        <a href="blog.html">Blog</a>
+        <div class="mobile-auth">
+            <a href="#" class="auth-login">Log in</a>
+            <a href="#" class="auth-signup">Create account</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main relative class="max-w-7xl mx-auto px-6 pb-16">
+        
+        <!-- Hero Section --><div class="hero-glow"></div>
+        <div class="text-center pt-12 pb-10 max-w-3xl mx-auto reveal">
+            <p class="text-[#f03e3e] text-xs font-bold tracking-widest uppercase mb-4">News</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-white">What's Happening on Celebso</h1>
+            <p class="text-dark-textMuted text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+                Stay updated with the latest announcements, product updates, features, and community stories.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="flex items-center w-full max-w-2xl mx-auto bg-dark-card border border-dark-border rounded-full p-2 pl-6 shadow-sm focus-within:ring-2 focus-within:ring-dark-border transition-all">
+                <i class="ph ph-magnifying-glass text-dark-textMuted text-xl mr-3"></i>
+                <input type="text" placeholder="Search news, topics or keywords..." class="flex-1 outline-none text-sm text-dark-text bg-transparent placeholder-dark-textMuted">
+                <button class="bg-dark-red text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-red-600 transition">Search</button>
+            </div>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+            <a href="#" class="bg-dark-red text-white text-sm font-medium px-5 py-2 rounded-full">All News</a>
+            <a href="#" class="bg-dark-card border border-dark-border text-dark-text text-sm font-medium px-5 py-2 rounded-full hover:bg-[#111] transition">Product Updates</a>
+            <a href="#" class="bg-dark-card border border-dark-border text-dark-text text-sm font-medium px-5 py-2 rounded-full hover:bg-[#111] transition">Features</a>
+            <a href="#" class="bg-dark-card border border-dark-border text-dark-text text-sm font-medium px-5 py-2 rounded-full hover:bg-[#111] transition">Community</a>
+            <a href="#" class="bg-dark-card border border-dark-border text-dark-text text-sm font-medium px-5 py-2 rounded-full hover:bg-[#111] transition">Partnerships</a>
+            <a href="#" class="bg-dark-card border border-dark-border text-dark-text text-sm font-medium px-5 py-2 rounded-full hover:bg-[#111] transition">Events</a>
+            <a href="#" class="bg-dark-card border border-dark-border text-dark-text text-sm font-medium px-5 py-2 rounded-full hover:bg-[#111] transition">Company</a>
+        </div>
+
+        <!-- Featured Article -->
+        <div class="glass-card rounded-[32px] overflow-hidden mb-16 shadow-sm hover:shadow-md transition-shadow reveal flex flex-col lg:flex-row">
+            <!-- Image Area -->
+            <div class="lg:w-1/2 relative bg-gray-900 min-h-[300px]">
+                <img src="images/ChatGPT%20Image%20Aug%2020%2C%202026%2C%2001_36_54%20PM.png" alt="Featured App Update" class="w-full h-full object-cover">
+                <div class="absolute top-6 left-6">
+                    <span class="bg-[#f03e3e] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">Featured</span>
+                </div>
+                <!-- Carousel Indicators -->
+                <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <div class="w-4 h-1.5 bg-dark-card rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-dark-card/50 rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-dark-card/50 rounded-full"></div>
+                </div>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="lg:w-1/2 p-10 lg:p-14 flex flex-col justify-center">
+                <div class="flex items-center gap-2 text-xs font-medium mb-4">
+                    <span class="text-dark-textMuted">May 18, 2025</span>
+                    <span class="text-gray-400">•</span>
+                    <span class="text-[#f03e3e]">Product Update</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight tracking-tight">Celebso 2.0 is Here! A Better Way to Connect.</h2>
+                <p class="text-dark-textMuted mb-8 leading-relaxed">
+                    We've upgraded Celebso with a fresh new look, faster performance, and powerful new features to help you create, connect and grow.
+                </p>
+                <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#f03e3e] transition">
+                    Read more <i class="ph ph-arrow-right text-lg"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Latest News Header -->
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="text-2xl font-bold tracking-tight">Latest News</h2>
+            <a href="#" class="inline-flex items-center gap-1 text-sm font-bold text-white hover:text-dark-textMuted transition">
+                View all news <i class="ph ph-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Latest News Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            
+            <!-- Card 1 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col hover:shadow-lg transition-shadow reveal">
+                <div class="h-48 bg-[#2e1f4d] w-full overflow-hidden">
+                    <img src="images/ChatGPT%20Image%20Aug%2020%2C%202026%2C%2001_32_10%20PM.png" alt="Composer" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-[#a855f7] text-[10px] font-bold uppercase tracking-wider mb-2">Feature</span>
+                    <span class="text-dark-textMuted text-xs font-medium mb-3">May 16, 2025</span>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">New Post Composer Now Live</h3>
+                    <p class="text-dark-textMuted text-sm mb-6 flex-grow">Create stunning posts with new tools, effects and easier sharing options.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#a855f7] transition mt-auto">
+                        Read more <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col hover:shadow-lg transition-shadow reveal">
+                <div class="h-48 bg-[#0f172a] w-full overflow-hidden">
+                    <img src="images/ChatGPT%20Image%20Aug%2020%2C%202026%2C%2001_33_13%20PM.png" alt="Community" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-[#10b981] text-[10px] font-bold uppercase tracking-wider mb-2">Community</span>
+                    <span class="text-dark-textMuted text-xs font-medium mb-3">May 14, 2025</span>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Communities Are Stronger Together</h3>
+                    <p class="text-dark-textMuted text-sm mb-6 flex-grow">Join topics you love, connect with like-minded people and grow your circle.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#10b981] transition mt-auto">
+                        Read more <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col hover:shadow-lg transition-shadow reveal">
+                <div class="h-48 bg-[#0a0a0a] w-full overflow-hidden">
+                    <img src="images/ChatGPT%20Image%20Aug%2020%2C%202026%2C%2001_34_18%20PM.png" alt="Analytics" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-[#3b82f6] text-[10px] font-bold uppercase tracking-wider mb-2">Update</span>
+                    <span class="text-dark-textMuted text-xs font-medium mb-3">May 12, 2025</span>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Creator Insights Get Smarter</h3>
+                    <p class="text-dark-textMuted text-sm mb-6 flex-grow">Track your growth with advanced analytics and understand your audience better.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#3b82f6] transition mt-auto">
+                        Read more <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col hover:shadow-lg transition-shadow reveal">
+                <div class="h-48 bg-[#311019] w-full overflow-hidden">
+                    <img src="images/ChatGPT%20Image%20Aug%2020%2C%202026%2C%2001_35_18%20PM.png" alt="Premium" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-[#f59e0b] text-[10px] font-bold uppercase tracking-wider mb-2">Announcement</span>
+                    <span class="text-dark-textMuted text-xs font-medium mb-3">May 10, 2025</span>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Celebso Premium Membership</h3>
+                    <p class="text-dark-textMuted text-sm mb-6 flex-grow">Unlock exclusive perks, boost your profile and stand out in the Celebso community.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#f59e0b] transition mt-auto">
+                        Read more <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="glass-card rounded-[32px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-10 reveal">
+            <div class="flex items-center gap-8 w-full md:w-auto">
+                <!-- Icon Composition -->
+                <div class="relative w-24 h-24 flex-shrink-0 flex items-center justify-center">
+                    <!-- Red glow shadow -->
+                    <div class="absolute inset-0 bg-[#f03e3e] rounded-full blur-xl opacity-30"></div>
+                    <!-- Red Envelope Circle -->
+                    <div class="relative w-20 h-20 bg-[#f03e3e] rounded-full flex items-center justify-center z-10">
+                        <i class="ph ph-envelope-simple text-white text-3xl"></i>
+                    </div>
+                    <!-- White Bell Notification Badge -->
+                    <div class="absolute bottom-0 right-0 w-10 h-10 bg-dark-card rounded-full flex items-center justify-center shadow-md z-20">
+                        <i class="ph-fill ph-bell text-gray-400 text-xl"></i>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-2 tracking-tight">Never miss an update</h3>
+                    <p class="text-dark-textMuted text-sm">Subscribe to get the latest news and updates from Celebso.</p>
+                </div>
+            </div>
+
+            <div class="w-full md:w-auto flex-1 max-w-md">
+                <div class="flex items-center bg-dark-card border border-dark-border rounded-lg p-1.5 shadow-sm">
+                    <input type="email" placeholder="Enter your email" class="flex-1 outline-none text-sm text-dark-text bg-transparent px-4 placeholder-dark-textMuted">
+                    <button class="bg-dark-red text-white text-sm font-semibold px-6 py-2.5 rounded-md hover:bg-red-600 transition whitespace-nowrap">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+<div class="footer-hero">
+
+    <img class="footer-hero-dark" src="images/footer-dark.jpg" alt="Celebso">
+
+    <div class="footer-text">
+
+        <div class="footer-logo">
+
+<img class="main-icon" src="images/ChatGPT%20Image%20Aug%2018%2C%202026%2C%2010_51_46%20PM.png" alt="Celebso">
+
+        </div>
+
+        <div class="footer-menu">
+
+            <a href="#contact">Contact Us</a>
+            <a href="terms.html">Terms</a>
+            <a href="help-center.html">Help Center</a>
+
+        </div>
+
+        <div class="email">
+        info@celebso.com
+        </div>
+
+        <div class="social">
+        <a class="soc" href="https://www.linkedin.com/company/celebso/posts/?feedView=all" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+        <a class="soc" href="https://www.instagram.com/celebsox?igsh=MXh6MjJ1cjg4ZWp2cA==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM448 261.9c0 37.4-.4 74.6-2.6 112-2.3 43.6-12.1 82.2-43.9 114-31.8 31.8-70.4 41.6-114 43.9-37.4 2.2-74.6 2.6-112 2.6s-74.6-.4-112-2.6c-43.6-2.3-82.2-12.1-114-43.9-31.8-31.8-41.6-70.4-43.9-114-2.2-37.4-2.6-74.6-2.6-112s.4-74.6 2.6-112c2.3-43.6 12.1-82.2 43.9-114 31.8-31.8 70.4-41.6 114-43.9 37.4-2.2 74.6-2.6 112-2.6s74.6.4 112 2.6c43.6 2.3 82.2 12.1 114 43.9 31.8 31.8 41.6 70.4 43.9 114 2.2 37.4 2.6 74.6 2.6 112z"/></svg></a>
+        <a class="soc" href="https://x.com/Celebso_" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+        </div>
+
+        <div class="copy">
+        © 2026 ANTELLAY Tech. All Rights Reserved. A Celebso Group Company.
+        </div>
+
+    </div>
+
+</div>
+
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
